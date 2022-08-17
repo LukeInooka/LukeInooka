@@ -1,3 +1,4 @@
+
 def wordle(green, yellow, grey):
     from wordlist import wordlist
     words = wordlist()
@@ -26,9 +27,9 @@ def wordle(green, yellow, grey):
                     green_count += 1
             if green_count == len(green):
                 l3.append(word)
-        print(l3)
+        return l3
     if len(yellow) == 0 and len(green) == 0:
-        print(l1)
+        return l1
     if len(yellow) == 0 and len(green) != 0:
         for word in l1:
             green_count = 0
@@ -37,7 +38,7 @@ def wordle(green, yellow, grey):
                     green_count += 1
             if green_count == len(green):
                 l2.append(word)
-        print(l2)
+        return l2
     if len(yellow) != 0 and len(green) == 0:
         for word in l1:
             yellow_count = 0
@@ -46,7 +47,7 @@ def wordle(green, yellow, grey):
                     yellow_count += 1
                 if yellow_count == len(yellow):
                     l2.append(word)
-        print(l2)
+        return l2
 
 
 greens = []
